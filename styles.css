@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f0f0f0; 
+    transition: background-color 0.5s ease; 
+}
+
+#assistant-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    transition: transform 0.5s ease; 
+}
+
+#assistant-image {
+    width: 100px;
+    height: auto;
+    opacity: 0.7;
+}
+
+#button-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100%;
+}
+
+.button-box {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    width: 100px; 
+    margin: 10px; 
+    transition: background-color 0.3s ease; 
+}
+
+.button-box:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#explanation {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1;
+    margin-top: 50px;
+}
+
+
+

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add your custom CSS styles here */
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            transition: background-color 0.5s ease;
+        }
+
+        #assistant-container {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            transition: transform 0.5s ease;
+            z-index: 2; /* Ensure assistant is above buttons */
+        }
+
+        #assistant-image {
+            width: 100px;
+            height: auto;
+            opacity: 0.7;
+            transition: transform 0.3s ease;
+        }
+
+        #button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            z-index: 1; /* Ensure buttons are below assistant */
+        }
+
+        .button-box {
+            background-color: #bf34db;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            margin: 10px;
+            position: relative; /* Added to allow positioning the description */
+        }
+
+        .button-box:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+
+        .button-description {
+            position: absolute;
+            top: 100%; /* Position description below the button */
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+            z-index: 3; /* Ensure descriptions are above assistant */
+        }
+
+        .button-box:hover .button-description {
+            display: block; /* Show description on hover */
+        }
+
+        #explanation {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+            z-index: 2; /* Ensure explanation is above buttons */
+            margin-top: 50px;
+        }
+
+        #page-content {
+            margin: 0 auto;
+            color: rebeccapurple;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <title>On-Page Assistant</title>
+</head>
+<body>
+    <div id="page-content">
+        <h1>Sreen Assistant</h1>
+        <p>This web page has an on-page assistant. You can interact with the assistant by hovering over the buttons below.</p>
+        <p>Feel free to explore the content on this page.</p>
+    </div>
+    <div id="assistant-container">
+        <img id="assistant-image" src="images/robocop.gif" alt="Assistant">
+        <div id="explanation">
+            <p>Welcome to our page!</p>
+        </div>
+    </div>
+
+    <div id="button-container">
+        <div class="button-box" id="button-1" onmouseover="moveToButton(this)" onclick="changeBackgroundColor()">
+            <button>Change Background Color</button>
+            <div class="button-description">Change the background color of the page</div>
+        </div>
+        <div class="button-box" id="button-2" onmouseover="moveToButton(this)" onclick="changeTextColor()">
+            <button>Change Text Color</button>
+            <div class="button-description">Change the text color of the page</div>
+        </div>
+        <div class="button-box" id="button-3" onmouseover="moveToButton(this)" onclick="moveBox()">
+            <button>Move Box</button>
+            <div class="button-description">Move the position of the "Box" button</div>
+        </div>
+    </div>
+   
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
